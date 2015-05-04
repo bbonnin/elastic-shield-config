@@ -14,7 +14,7 @@ public class SecuredClient {
     public static void main(String[] args) throws Exception {
 
         final Client client = new TransportClient()
-            .addTransportAddress(new InetSocketTransportAddress("Bruno-ZenPC.home", 9500));
+            .addTransportAddress(new InetSocketTransportAddress("my hostname", 9500));
 
         final SearchResponse response = client.prepareSearch()
             .setSize(1)
