@@ -1,0 +1,30 @@
+
+shield.audit.enabled: true
+
+#shield.ssl.truststore.path: /path/to/shield-trust.jks 
+#shield.ssl.truststore.password: elastic
+
+shield.ssl.keystore.path: /path/to/shield-node.jks 
+shield.ssl.keystore.password: elastic
+shield.ssl.keystore.key_password: shield
+
+# Activation of SSL client authentication
+shield.transport.ssl.client.auth: false
+
+# SSL is activated for the transport protocol
+shield.transport.ssl: true
+
+# SSL is activated for the HTTP protocol
+shield.http.ssl: true
+
+# Profile for the client named "search-client"
+transport.profiles.search-client.ssl: true
+transport.profiles.search-client:
+    port: 9500-9600 
+    type: client
+
+# Anonymous authentication
+shield.authc:
+    anonymous:
+        username: anonymous_user 
+        roles: power_user

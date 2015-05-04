@@ -1,0 +1,13 @@
+cluster.name: elasticsearch
+
+# Use of SSL for transport
+shield.transport.ssl: true
+
+# No SSL client authentication
+shield.ssl.truststore.path: config-client/shield-trust.jks 
+shield.ssl.truststore.password: elastic
+
+# Uncomment to use SSL client authentication
+#shield.ssl.keystore.path: config-client/shield-client.jks 
+#shield.ssl.keystore.password: elastic
+#shield.ssl.keystore.key_password: shield
