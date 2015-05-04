@@ -94,6 +94,6 @@ Certificat ajouté au fichier de clés
 
 ``` bash
 
-mvn clean exec:java
+mvn compile exec:java -Dexec.args="my hostname"
 
 ```

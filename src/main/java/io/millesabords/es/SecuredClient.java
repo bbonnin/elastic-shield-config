@@ -13,8 +13,17 @@ public class SecuredClient {
 
     public static void main(String[] args) throws Exception {
 
+        if (args.length != 1) {
+            System.err.println("Usage : java " + SecuredClient.class.getName() + " <Elasticsearch hostname>");
+            System.exit(1);
+        }
+
+        final String hostname = args[0];
+
+        System.out.println("Hostname : " + hostname);
+
         final Client client = new TransportClient()
-            .addTransportAddress(new InetSocketTransportAddress("my hostname", 9500));
+            .addTransportAddress(new InetSocketTransportAddress(hostname, 9500));
 
         final SearchResponse response = client.prepareSearch()
             .setSize(1)
