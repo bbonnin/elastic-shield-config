@@ -1,6 +1,6 @@
 # Configuration for elasticsearch/shield
 
-This configuration used a self-signed certificate.
+This configuration uses a self-signed certificate and there is no client authentication.
 
 
 Links to Elastic site :
@@ -17,7 +17,7 @@ Self-signed certificate :
 
 ``` bash
 
-$ keytool.exe  -genkey -alias shield -keystore shield-node.jks -keyalg RSA -keysize 2048 -validity 712
+$ keytool  -genkey -alias shield -keystore shield-node.jks -keyalg RSA -keysize 2048 
 Entrez le mot de passe du fichier de clés : elastic
 Ressaisissez le nouveau mot de passe :
 Quels sont vos nom et prénom ?
